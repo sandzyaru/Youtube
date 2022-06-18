@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+        android:id="@+id/view"
         android:layout_width="120dp"
         android:layout_height="80dp"
         android:layout_marginStart="15dp"
@@ -20,7 +20,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/image_ev"
+                android:id="@+id/image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
@@ -36,10 +36,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@id/cardView"
+        app:layout_constraintBottom_toBottomOf="@id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/cardView"
-        app:layout_constraintTop_toTopOf="@id/cardView">
+        app:layout_constraintStart_toEndOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/view">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/container_text"
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/playlistName_tv"
+                android:id="@+id/tv_play_list_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/time_tv"
+                android:id="@+id/tv_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="@string/time"

@@ -26,9 +26,9 @@ class PlaylistDetailAdapter(private val list: List<Item>): RecyclerView.Adapter<
         RecyclerView.ViewHolder(binding.root) {
 
         fun onBind(items: Item) {
-            Glide.with(binding.root).load(items.snippet.thumbnails.default.url).into(binding.imageEv)
-            binding.playlistNameTv.text = items.snippet.title
-            binding.timeTv.text = items.snippet.publishedAt.dropLast(10)
+            Glide.with(binding.root).load(items.snippet.thumbnails.default.url).into(binding.image)
+            binding.tvPlayListName.text = items.snippet.title
+            binding.tvTime.text = items.snippet.publishedAt.dropLast(10)
         }
     }
 }
