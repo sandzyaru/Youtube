@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.Toast
 import androidx.core.view.isVisible
-import androidx.lifecycle.ViewModelProvider
 
 import kg.yoriichi.youtube.core.base.BaseActivity
 import kg.yoriichi.youtube.core.network.result.Status
@@ -15,12 +14,12 @@ import kg.yoriichi.youtube.databinding.ActivityPlayListBinding
 import kg.yoriichi.youtube.ui.playlist_detail.PlaylistDetailActivity
 import kg.yoriichi.youtube.utils.NetworkStatus
 import kg.yoriichi.youtube.utils.NetworkStatusHelper
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class PlayListActivity : BaseActivity<ActivityPlayListBinding, PlaylistViewModel>() {
 
-    override val viewModel: PlaylistViewModel by lazy {
-        ViewModelProvider(this)[PlaylistViewModel::class.java]
-    }
+    override val viewModel: PlaylistViewModel by viewModel()
+
     override fun inflateViewBinding(inflater: LayoutInflater): ActivityPlayListBinding {
         return ActivityPlayListBinding.inflate(inflater)
     }
